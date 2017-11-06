@@ -1,0 +1,117 @@
+apply plugin: 'com.android.library'
+
+android {
+    compileSdkVersion = 23
+    buildToolsVersion = "26.0.2"
+
+    defaultConfig {
+        //applicationId "com.nic.securitymanager"
+        minSdkVersion 14
+        targetSdkVersion 26
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
+        /*ndk {
+            abiFilters 'x86', 'x86_64', 'armeabi', 'armeabi-v7a', 'arm64-v8a'
+        }*/
+
+        externalNativeBuild {
+            cmake {
+                cppFlags "-frtti -fexceptions"
+               /* arguments '-DANDROID_PLATFORM=android-23',
+                        '-DANDROID_TOOLCHAIN=clang', '-DANDROID_STL=gnustl_static'*/
+
+                // Passes optional arguments to CMake.
+                //arguments "-DANDROID_ARM_NEON=TRUE", "-DANDROID_TOOLCHAIN=clang"
+
+                // Sets optional flags for the C compiler.
+                cFlags "-fexceptions", "-frtti"
+
+                // Sets a flag to enable format macro constants for the C++ compiler.
+                cppFlags "-D__STDC_FORMAT_MACROS"
+            }
+        }
+        vectorDrawables.useSupportLibrary true;
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    externalNativeBuild {
+        cmake {
+            path "CMakeLists.txt"
+        }
+
+    }
+
+    /*productFlavors {
+        arm7 {
+            // in the future, ndk.abiFilter might also work
+            ndk {
+                abiFilter 'armeabi-v7a'
+            }
+        }
+        arm8 {
+            ndk {
+                abiFilters 'arm64-v8a'
+            }
+        }
+        arm {
+            ndk {
+                abiFilter 'armeabi'
+            }
+        }
+        x86 {
+            ndk {
+                abiFilter 'x86'
+            }
+        }
+        x86_64 {
+            ndk {
+                abiFilter 'x86_64'
+            }
+        }
+        mips {
+            ndk {
+                abiFilters 'mips', 'mips64'
+            }
+        }
+        universal {
+            ndk {
+                abiFilters 'mips', 'mips64', 'x86', 'x86_64'
+                //abiFilters 'x86', 'x86_64', 'armeabi', 'armeabi-v7a', 'arm64-v8a'
+            }
+        }
+
+       *//* demo {
+            externalNativeBuild {
+                cmake {
+                    // Specifies which native libraries to build and package for this
+                    // product flavor. If you don't configure this property, Gradle
+                    // builds and packages all shared object libraries that you define
+                    // in your CMake or ndk-build project.
+                    targets "native-lib-demo"
+                }
+            }
+        }
+
+        paid {
+            externalNativeBuild {
+                cmake {
+                    targets "native-lib-paid"
+                }
+            }
+        }*//*
+    }*/
+}
+
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    compile files('libs/commons-codec-1.9-rep.jar')
+    compile project(':native-api')
+}
