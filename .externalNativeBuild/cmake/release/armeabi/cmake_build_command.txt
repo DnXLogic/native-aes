@@ -1,0 +1,16 @@
+Executable : D:\AndroidSDK\sdk\cmake\3.6.4111459\bin\cmake.exe
+arguments : 
+-HD:\AndroidProjects\NativeAPISecurityDemo\native-aes
+-BD:\AndroidProjects\NativeAPISecurityDemo\native-aes\.externalNativeBuild\cmake\release\armeabi
+-GAndroid Gradle - Ninja
+-DANDROID_ABI=armeabi
+-DANDROID_NDK=D:\android-ndk-r15c
+-DCMAKE_LIBRARY_OUTPUT_DIRECTORY=D:\AndroidProjects\NativeAPISecurityDemo\native-aes\build\intermediates\cmake\release\obj\armeabi
+-DCMAKE_BUILD_TYPE=Release
+-DCMAKE_MAKE_PROGRAM=D:\AndroidSDK\sdk\cmake\3.6.4111459\bin\ninja.exe
+-DCMAKE_TOOLCHAIN_FILE=D:\android-ndk-r15c\build\cmake\android.toolchain.cmake
+-DANDROID_PLATFORM=android-14
+-DCMAKE_C_FLAGS=-fexceptions -frtti
+-DCMAKE_CXX_FLAGS=-frtti -fexceptions -D__STDC_FORMAT_MACROS
+jvmArgs : 
+

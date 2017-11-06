@@ -1,0 +1,4 @@
+# ninja log v5
+2	374	0	CMakeFiles/native-aes.dir/src/main/cpp/encrypt.c.o	9c65e9f41c41c37a
+8	431	0	CMakeFiles/native-aes.dir/src/main/cpp/aes/aes.c.o	b929bffdf59a2fe6
+431	577	0	../../../../build/intermediates/cmake/debug/obj/mips64/libnative-aes.so	707d18bc78b1a102

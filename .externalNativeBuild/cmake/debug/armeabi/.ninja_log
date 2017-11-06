@@ -1,0 +1,4 @@
+# ninja log v5
+1	170	0	CMakeFiles/native-aes.dir/src/main/cpp/encrypt.c.o	4441cd1be2f5a369
+5	195	0	CMakeFiles/native-aes.dir/src/main/cpp/aes/aes.c.o	ae818562d484ff62
+195	293	0	../../../../build/intermediates/cmake/debug/obj/armeabi/libnative-aes.so	2820bdc2ce0808d2

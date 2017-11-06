@@ -1,0 +1,3 @@
+D:/AndroidProjects/NativeAPISecurityDemo/native-aes/.externalNativeBuild/cmake/release/mips/CMakeFiles/edit_cache.dir
+D:/AndroidProjects/NativeAPISecurityDemo/native-aes/.externalNativeBuild/cmake/release/mips/CMakeFiles/native-aes.dir
+D:/AndroidProjects/NativeAPISecurityDemo/native-aes/.externalNativeBuild/cmake/release/mips/CMakeFiles/rebuild_cache.dir
